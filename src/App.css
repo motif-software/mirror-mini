@@ -1,0 +1,15 @@
+.App {
+  height: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.App > .column {
+  width: 50%;
+  height: 100%;
+}
+
+.App > .column > *{
+  height: 100%;
+}

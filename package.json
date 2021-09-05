@@ -1,0 +1,74 @@
+{
+  "name": "mirror-mini",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motif-software/mirror-mini"
+  },
+  "author": "Oliver Lade <piemaster21@gmail.com> (https://github.com/orlade)",
+  "homepage": "https://motif.software/",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "final-form": "^4.20.2",
+    "gojs": "^2.1.49",
+    "gojs-react": "^1.1.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "prismjs": "^1.24.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.3",
+    "react-native-fs": "^2.18.0",
+    "react-redux": "^7.2.4",
+    "react-scripts": "4.0.3",
+    "react-simple-code-editor": "^0.11.0",
+    "redux": "^4.1.1",
+    "redux-form": "^8.3.7",
+    "redux-persist": "^6.0.0",
+    "typescript": "~4.1.5",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/js-yaml": "^4.0.3",
+    "@types/lodash": "^4.14.172",
+    "@types/prismjs": "^1.16.6",
+    "@types/react": "^17.0.19",
+    "typescript": "^4.4.2"
+  }
+}
