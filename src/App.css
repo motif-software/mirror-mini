@@ -10,6 +10,10 @@
   height: 100%;
 }
 
-.App > .column > *{
+.App > .column:not(:last-child) {
+  border-right: thin solid black;
+}
+
+.App > .column > * {
   height: 100%;
 }

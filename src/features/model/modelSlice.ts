@@ -17,6 +17,11 @@ export type Edge = {
   to: string;
 };
 
+export type Graph = {
+  nodes: Node[];
+  edges: Edge[];
+};
+
 export type Element = Node | Edge;
 
 // Redux models

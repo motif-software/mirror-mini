@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action, combineReducers } from "@reduxjs/toolkit";
+import storage from "redux-persist/lib/storage";
+import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
+
+import { createActionSync } from "./middleware";
 import textReducer from "../features/texteditor/textEditorSlice";
 import { reducer as graphReducer } from "../features/model/modelSlice";
-
-import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { registry, canonicalTypes } from "../features/texteditor/textEditorSync";
 
 const rootReducer = combineReducers({
   text: textReducer,
@@ -18,6 +20,8 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
+const actionSync = createActionSync(registry, canonicalTypes);
+
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
@@ -25,7 +29,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    }).concat(actionSync),
 });
 
 export type AppDispatch = typeof store.dispatch;
